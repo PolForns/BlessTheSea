@@ -5,40 +5,89 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" href="" type="image/png">
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/functions.js"></script>
+
 </head>
 <body>
-
 	<div class="content">
 
-		<div class="menuSuperior">
-			<div class="menuSuperior__idiomes">
-				<a href="#">ES</a> | <a href="#">EN</a>
-			</div>
-			<div class="menuSuperior__menu">
-				<div class="menuSuperior__menu--logo">
-					<img src="">LOGO
+		<!-- MENU TOP	-->
+		<div class="menuTop hidden">
+			<div class="menuTop__lang">
+				<div class="menuTop__lang--inner">
+					<a href="#">ES</a> | <a href="#">ENG</a>
 				</div>
-				<ul class="menuSuperior__menu--links">
-						<li>DESCÚBRENOS</li>
-						<li>LOOKBOOK</li>
-						<li>BLOG</li>
-						<li>SUSCRÍBETE</li>
-						<li>CONTACTO</li>
+			</div>
+			<div class="menuTop__menu">
+				<div class="menuTop__menu--logo">
+					<img src="images/logo-small.png">
+				</div>
+				<ul class="menuTop__menu--links">
+					<li><a href="#descubrenos">DESCÚBRENOS</a></li>
+					<li><a href="#lookbook">LOOKBOOK</a></li>
+					<li><a href="#blog">BLOG</a></li>
+					<li><a href="#suscribete">SUSCRÍBETE</a></li>
+					<li><a href="#contacto">CONTACTO</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- HEADER AND MENU	-->
+		<div class="header">
+			<div class="menu">
+				<div class="menu__lang">
+					<div class="menu__lang--inner">
+						<a href="#">ES</a> | <a href="#">ENG</a>
+					</div>
+				</div>
+				<div class="menu__menu">
+					<ul class="menu__menu--links">
+						<li><a href="#descubrenos">DESCÚBRENOS</a></li>
+						<li><a href="#lookbook">LOOKBOOK</a></li>
+						<li><a href="#blog">BLOG</a></li>
+						<li><a href="#suscribete">SUSCRÍBETE</a></li>
+						<li><a href="#contacto">CONTACTO</a></li>
 					</ul>
 				</div>
 			</div>
-		
-		<div class="menu">
-			
+
+			<div class="logoHeader">
+				<img src="images/logo-big.png" class="logoHeader__image">
+			</div>
 		</div>
 
+		<!-- DESCUBRENOS SECTION	-->
+		<div class="triangleDescubrenos"></div>
+		<div class="descubrenos" id="descubrenos">
+			<h2>Descúbrenos</h2>
+			<div class="descubrenosContent">
+				<img src="images/mohamed.png">
+				<div class="descubrenosContent__text">
+					<p>
+						Bless The Sea nace de un nuevo estilo de vida  fundado por las ansias de libertad y de conectar con un mismo. Nuestros modelos están destindos a los amantes del mar y de la nat uraleza, para todos aquellos respetuosos con el medio ambiente. Bless The Sea nace de un nuevo estilo de vida  fundado por las ansias de libertad y de conectar con un mismo. Nuestros modelos están destindos a los amantes del mar y de la naturaleza, para todos aquellos respetuosos con el medio ambiente.
+					</p>
+					<div class="descubrenosContent__text--button contentButton">
+						<a href="#">SABER MÁS</a>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		
+		<!-- LOOKBOOK -->
+		<div class="lookbook" id="lookbook">
+			<h2>LookBook</h2>
+			<div class="lookbook__image">
+				<img src="images/kalen-emsley-100223-unsplash.jpg">
+				<div class="lookbook__image--dots"></div>
+			</div>
+		</div>
+
+
 	</div>
-
 </body>
 </html>

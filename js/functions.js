@@ -1,0 +1,32 @@
+/*
+ * FUNCTIONS.JS
+*/
+
+/* JQUERY */
+
+$(window).scroll(
+	function() {
+    if($(window).scrollTop() > 200) {
+        $('.menuTop').removeClass('hidden');
+        // add animation
+    } else {
+        $('.menuTop').addClass('hidden');
+        // add animation
+    }
+	}
+);
+
+$(document).ready(
+	function(){
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').animate({
+				'scrollTop': $target.offset().top
+			}, 1000, 'swing');
+		});
+	}
+);
