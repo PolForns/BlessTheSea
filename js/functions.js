@@ -30,3 +30,13 @@ $(document).ready(
 		});
 	}
 );
+
+/* FUNCTIONS */
+
+function menu(num) {
+	if (num === 1) {
+		$('.menuMobile').removeClass('hidden');
+	} else {
+		$('.menuMobile').addClass('hidden');
+	}
+}

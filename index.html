@@ -37,6 +37,11 @@
 			</div>
 		</div>
 
+		<div class="menuTopMobile">
+			<img class="menuTopMobile__logo" src="images/logo-small.png">
+			<img class="menuTopMobile__menu" src="images/menu.svg" onclick="menu(1)">
+		</div>
+
 		<!-- HEADER AND MENU	-->
 		<div class="header">
 			<div class="menu">
@@ -58,6 +63,23 @@
 
 			<div class="logoHeader">
 				<img src="images/logo-big.png" class="logoHeader__image">
+			</div>
+		</div>
+
+		<div class="menuMobile hidden">
+			<img class="menuMobile__close" src="images/close.svg" onclick="menu(2)">
+			<div class="menuMobile__info">
+				<img class="menuMobile__info--logo" src="images/logo-small.png">
+				<ul class="menuMobile__info--menu">
+					<li><a href="#descubrenos" onclick="menu(2)">DESCÚBRENOS</a></li>
+					<li><a href="#lookbook" onclick="menu(2)">LOOKBOOK</a></li>
+					<li><a href="#blog" onclick="menu(2)">BLOG</a></li>
+					<li><a href="#suscribete" onclick="menu(2)">SUSCRÍBETE</a></li>
+					<li><a href="#contacto" onclick="menu(2)">CONTACTO</a></li>
+				</ul>
+				<div class="menuMobile__info--lang">
+					<a href="#">ES</a> | <a href="#">ENG</a>
+				</div>
 			</div>
 		</div>
 
@@ -85,8 +107,142 @@
 				<img src="images/kalen-emsley-100223-unsplash.jpg">
 				<div class="lookbook__image--dots"></div>
 			</div>
+
+			<div class="lookbook__gallery">
+				<div class="lookbook__gallery--images">
+					<img src="images/1.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/2.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/3.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/4.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/5.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/6.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/7.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/8.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/9.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/10.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/11.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/12.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/13.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/14.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/15.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/16.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/17.jpg">
+				</div>
+				<div class="lookbook__gallery--images">
+					<img src="images/18.jpg">
+				</div>
+			</div>
+
+			<div class="lookbook__button contentButton">
+				<a>DESCARGAR CATALOGO</a>
+			</div>
 		</div>
 
+		<!-- BLOG -->
+		<div class="blog" id="blog">
+			<h2>Blog</h2>
+			<div class="blogEntries">
+				<div class="blogEntries__entry">
+					<a href="#">
+						<div class="blogEntries__entry--images">
+							<img src="images/blog1.jpg">
+						</div>
+						<div class="blogEntries__entry--text">
+							Nulla non fermentum sapien, in consectetur
+						</div>
+					</a>
+				</div>
+				<div class="blogEntries__entry">
+					<a>
+						<div class="blogEntries__entry--images">
+							<img src="images/blog2.jpg">
+						</div>
+						<div class="blogEntries__entry--text">
+							Fusce eu nunc non quam pharetra fermentum
+						</div>
+					</a>
+				</div>
+				<div class="blogEntries__entry">
+					<a>
+						<div class="blogEntries__entry--images">
+							<img src="images/blog3.jpg">
+						</div>
+						<div class="blogEntries__entry--text">
+							Duis a felis sed libero consectetur laoree
+						</div>
+					</a>
+				</div>
+				<div class="blogEntries__entry">
+					<a>
+						<div class="blogEntries__entry--images">
+							<img src="images/blog4.jpg">
+						</div>
+						<div class="blogEntries__entry--text">
+							Cras posuere libero imperdiet
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="blog__button contentButton">
+				<a href="#">VER BLOG</a>
+			</div>
+		</div>
+
+		<!-- SUSCRIBETE -->
+		<div class="suscribete" id="suscribete">
+			<div class="suscribeteContent">
+				<div class="suscribeteContent__form">
+					<h2>Suscríbete</h2>
+					<form method="" action="">
+						<p class="suscribeteContent__form--info">Si quieres estar informado en todo momento de nuestros nuevos <b>productos</b> y aprovechar las mejores <b>ofertas</b>, no olvides suscribírte.</p>
+						<input class="suscribeteContent__form--mail" type="mail" name="mail" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO">
+						<p class="suscribeteContent__form--privacy">Al enviar este formulario, aceptas nuestra <a>política de privacidad.</a></p>
+						<input class="suscribeteContent__form--submit contentButton" type="submit" value="ENVIAR">
+					</form>
+				</div>
+				<div class="suscribeteContent__image">
+					<img src="images/j.jpg">
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<footer id="contacto">
+			FOOTER
+		</footer>
 
 	</div>
 </body>

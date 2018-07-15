@@ -20,8 +20,13 @@ body {
 }
 
 h2 {
-	font-family: Oswald-Bold;
+	font-family: Oswald;
+	font-weight: Bold;
 	font-size: 5em;
+
+	@media only screen and (max-width: 768px) {
+		font-size: 3em;
+	}
 }
 
 p {
@@ -35,6 +40,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 li {
@@ -70,6 +76,10 @@ li {
 	flex-wrap: wrap;
 	justify-content: center;
 
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+
 	&__lang {
 		background-color: $grisMenu;
 		width: 100%;
@@ -83,7 +93,8 @@ li {
 		}
 		a {
 			padding: 0 10px;
-			font-family: Roboto-Light, Roboto;
+			font-family: Roboto;
+			font-weight: 300;
 		}
 	}
 
@@ -110,6 +121,33 @@ li {
 	}
 }
 
+.menuTopMobile {
+	height: 97px;
+	width: 100%;
+	background-color: white;
+	border-bottom: 3px solid grey; 
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	@media only screen and (max-width: 768px) {
+		display: block;
+	}
+
+	&__logo {
+		height: 80px;
+		padding: 10px 60px;
+		float: left;
+	}
+
+	&__menu {
+		float: right;
+		height: 50px;
+		padding: 25px 50px;
+	}
+}
+
 
 /* MENU AND HEADER */
 .header {
@@ -120,6 +158,10 @@ li {
 	background-position: center center;
 	background-size: cover;
 	background-color: white;
+
+	@media only screen and (max-width: 768px) {
+		height: 460px;
+	}
 }
 
 .menu {
@@ -127,6 +169,10 @@ li {
 	font-size: 1.5em;
 	width: 100%;
 	color: white;
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 	
 	a {
 		color: white;
@@ -145,7 +191,8 @@ li {
 			
 			a {
 				padding: 0 10px;
-				font-family: Roboto-Light, Roboto;
+				font-family: Roboto;
+				font-weight: 300;
 			}
 		}
 	}
@@ -162,7 +209,7 @@ li {
 		
 			li {
 				display: inline;
-				padding: 0 20px;
+				padding: 0 10px;
 			}
 		}
 	}
@@ -173,7 +220,58 @@ li {
 	text-align: center;
 	
 	img {
-		height: 360px;
+		max-width: 550px;
+		width: 80%;
+		margin: 50px 0 0;
+	}
+}
+
+.menuMobile {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	background-color: white;
+
+	@media only screen and (max-width: 768px) {
+		display: block;
+	}
+
+	&__close {
+		position: fixed;
+		top: 30px;
+		right: 40px;
+		width: 50px;
+		color: $grisIcones;
+	}
+
+	&__info {
+		margin: 20% auto 0;
+		text-align: center;
+
+		&--logo {
+			height: 100px;
+		}
+
+		&--menu {
+			font-family: Roboto;
+			font-size: 1.87em;
+			margin: 20px 0 0;
+
+			li {
+				line-height: 70px;
+			}
+		}
+
+		&--lang {
+			font-size: 1.56em;
+			margin: 50px 0 0;
+		}
 	}
 }
 
@@ -185,15 +283,24 @@ li {
 	border-left: 600px solid transparent;
 	border-right: 600px solid transparent;
 	border-top: 550px solid $rosaFormes;
+
+	@media only screen and (max-width: 1200px) {
+		display: none;
+	}
 }
 
 .descubrenos {
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	margin: -550px auto 0;
 	padding: 70px 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+
+	@media only screen and (max-width: 1200px) {
+		margin: 0 auto;
+	}
 
 	h2 {
 		text-align: center;
@@ -204,15 +311,32 @@ li {
 .descubrenosContent {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	width: 100%;
 	margin: 100px 0 0;
 
 	img {
+		max-width: 50%;
+		width: auto;
+		height: auto;
+
+		@media only screen and (max-width: 768px) {
+			max-width: 100%;
+			width: auto;
+			margin: 0 auto;
+		}
 	}
 	
 	&__text {
-		width: 450px;
+		width: 50%;
+		max-width: 450px;
 		margin: 100px 0 0;
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+			max-width: 100%;
+			padding: 0 20px;
+		}
 
 		p {
 			margin: 0 0 100px;
@@ -224,14 +348,188 @@ li {
 /* LOOKBOOK */
 .lookbook {
 	width: 100%;
-	 h2 {
-	 	width: 1200px;
+	h2 {
+	 	max-width: 1200px;
 	 	margin: 150px auto 70px;
-	 }
 
-	 &__image {
+	 	@media only screen and (max-width: 768px) {
+			padding: 0 50px;
+		}
+	}
+
+	&__image {
 	 	img {
 	 		width: 100%;
+
+	 		@media only screen and (max-width: 768px) {
+				display: none;	
+			}
 	 	}
-	 }
+	}
+
+	&__gallery {
+	 	max-width: 1200px;
+	 	margin: 70px auto 0;
+	 	display: flex;
+	 	flex-wrap: wrap;
+	 	justify-content: center;
+
+	 	&--images {
+	 		width: 200px;
+	 		height: 200px;
+
+	 		img {
+	 			padding: 10px;
+	 			height: 180px;
+	 			width: 180px;
+	 		}
+	 	}
+
+	}
+ 	&__button {
+ 		margin: 70px auto 0;
+ 	}
+}
+
+/* BLOG */
+.blog {
+	width: 100%;
+	max-width: 1200px;
+	margin: 250px auto 0;
+
+	&__button {
+		margin: 50px auto 0;
+
+	}
+}
+
+.blogEntries {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 50px 0 0;
+
+	&__entry {
+		width: 25%;
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
+
+		&--images {
+			padding: 10px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&--text {
+			padding: 10px;
+			font-family: Oswald;
+			font-size: 2.25em
+		}
+	}
+}
+
+/* SUSCRIBETE */
+.suscribete {
+	margin: 250px auto 0;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.suscribeteContent {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__form {
+		width: 50%;
+		font-weight: 300;
+		padding: 50px 0 0;
+
+		@media only screen and (max-width: 1720px) {
+			padding: 50px;
+			width: 100%;
+		}
+
+		b, a {
+			font-weight: 500;
+		}
+
+		form {
+			padding: 50px 100px 0 0;
+		}
+
+		&--info {
+			font-size: 1.06em;
+		}
+
+		&--mail {
+			width: 380px;
+			padding: 5px 10px;
+			font-family: Montserrat;
+			font-size: 1.06em;
+			font-weight: 300;
+			border: solid 4px $grisBotons;
+			margin: 20px 0 0;
+
+			@media only screen and (max-width: 768px) {
+				width: 200px;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&--privacy {
+			font-size: 0.81em;
+			margin: 20px 0 0;
+		}
+
+		&--submit {
+			border: none;
+			cursor: pointer;
+			margin: 20px 0 0;
+			padding: 5px 50px;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__image {
+		width: 50%;
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
+
+		img {
+			width: 850px;
+			height: auto;
+
+			@media only screen and (max-width: 1720px) {
+				width: 100%;
+				margin: 50px 0 0;
+			}
+		}
+	}
+}
+
+/* FOOTER */
+footer {
+	margin: 120px 0 0;
+	width: 100%;
+
+	text-align: center;
+	padding: 50px 0;
+	background-color: $grisMenu;
 }
