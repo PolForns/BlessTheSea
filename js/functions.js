@@ -31,6 +31,13 @@ $(document).ready(
 	}
 );
 
+$(window).on( 'resize', function () {
+    $('.triangleDescubrenos').border-left($(this).width() / 2);
+    $('.triangleDescubrenos').border-right($(this).width() / 2);
+}).resize();
+
+
+
 /* FUNCTIONS */
 
 function menu(num) {
