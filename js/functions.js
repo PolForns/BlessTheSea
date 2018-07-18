@@ -31,9 +31,25 @@ $(document).ready(
 	}
 );
 
-$(window).on( 'resize', function () {
-    $('.triangleDescubrenos').border-left($(this).width() / 2);
-    $('.triangleDescubrenos').border-right($(this).width() / 2);
+$(document).ready(function() {
+	console.log($(window).width());
+	if ($(window).width() < 1200) {
+		$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
+	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	} else {
+		$('.triangleDescubrenos').css('border-left-width', '600px');
+	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	}
+});
+
+$(window).on('resize', function () {
+	if ($(window).width() < 1200) {
+	  $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
+	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	} else {
+		$('.triangleDescubrenos').css('border-left-width', '600px');
+	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	}
 }).resize();
 
 

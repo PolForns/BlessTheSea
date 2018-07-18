@@ -58,10 +58,12 @@ li {
 
 .contentButton {
 	background-color: $grisBotons;
-	padding: 10px 20px;
+	padding: 10px 50px;
 	width: max-content;
+	max-width: calc(100% - 100px);
 	font-family: Roboto;
 	font-size: 1.9em;
+	text-align: center;
 }
 
 
@@ -137,14 +139,14 @@ li {
 
 	&__logo {
 		height: 80px;
-		padding: 10px 60px;
+		padding: 10px 0 10px 60px;
 		float: left;
 	}
 
 	&__menu {
 		float: right;
 		height: 50px;
-		padding: 25px 50px;
+		padding: 25px 40px 25px 0;
 	}
 }
 
@@ -248,6 +250,7 @@ li {
 		right: 40px;
 		width: 50px;
 		color: $grisIcones;
+		width: 40px;
 	}
 
 	&__info {
@@ -280,13 +283,9 @@ li {
 	height: 0;
 	width: 0;
 	margin: 0 auto;
-	border-left: 600px solid transparent;
-	border-right: 600px solid transparent;
+	border-style: solid;
+	border-color: transparent; 
 	border-top: 550px solid $rosaFormes;
-
-	@media only screen and (max-width: 1200px) {
-		
-	}
 }
 
 .descubrenos {
@@ -297,10 +296,6 @@ li {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
-	@media only screen and (max-width: 1200px) {
-		margin: 0 auto;
-	}
 
 	h2 {
 		text-align: center;
@@ -314,6 +309,10 @@ li {
 	flex-wrap: wrap;
 	width: 100%;
 	margin: 100px 0 0;
+
+	@media only screen and (max-width: 768px) {
+		margin: 20px 0 0;
+	}
 
 	img {
 		max-width: 50%;
@@ -453,7 +452,6 @@ li {
 		padding: 50px 0 0;
 
 		@media only screen and (max-width: 1720px) {
-			padding: 50px;
 			width: 100%;
 		}
 
@@ -462,7 +460,11 @@ li {
 		}
 
 		form {
-			padding: 50px 100px 0 0;
+			padding: 50px 50px 0;
+
+			@media only screen and (max-width: 768px) {
+				padding: 50px 20px 0;
+			}
 		}
 
 		&--info {
@@ -497,6 +499,11 @@ li {
 			cursor: pointer;
 			margin: 20px 0 0;
 			padding: 5px 50px;
+			background-color: $grisBotons;
+			width: max-content;
+			font-family: Roboto;
+			font-size: 1.9em;
+			text-align: center;
 
 			&:focus {
 				outline: none;
@@ -531,8 +538,51 @@ li {
 footer {
 	margin: 120px 0 0;
 	width: 100%;
+	border-top: 2px solid $grisFooter;
+}
 
-	text-align: center;
-	padding: 50px 0;
-	background-color: $grisMenu;
+.footerTop {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 30px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__info {
+
+		&--links {
+			margin: 20px 0 0;
+			a {
+				margin: 0 20px 0 0;
+			}
+		}
+	}
+
+	&__social {
+		margin: auto 0;
+		img {
+			height: 40px;
+			padding: 5px;
+		}
+	}
+}
+
+.footerBottom {
+	background-color: $grisFooter;
+	text-align: left;
+	padding: 10px 0;
+
+	p {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		font-family: Roboto;
+		font-weight: 300;
+	}
+
+	&__link {
+		color: $verdLinkFooter;
+	}
 }
