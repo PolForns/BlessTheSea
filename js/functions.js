@@ -35,7 +35,7 @@ $(document).ready(function() {
 	if ($(window).width() < 1200) {
 		$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
 	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
-	  $('.quadratDescubrenos').css('height', 768 - $(window).width());
+	  $('.quadratDescubrenos').css('height', 700 - $(window).width());
 	  $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
@@ -48,7 +48,7 @@ $(window).on('resize', function () {
 	if ($(window).width() < 1200) {
 	  $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
 	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
-	  $('.quadratDescubrenos').css('height', 768 - $(window).width());
+	  $('.quadratDescubrenos').css('height', 700 - $(window).width());
 	  $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
