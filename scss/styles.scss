@@ -52,6 +52,12 @@ li {
    display: none !important;
 }
 
+.hideOnResponsive {
+	@media only screen and (max-width: 768px) {
+		display: none;	
+	}
+}
+
 .content {
 	width: 100%;
 }
@@ -450,9 +456,15 @@ li {
 		width: 50%;
 		font-weight: 300;
 		padding: 50px 0 0;
+		order: 1;
 
 		@media only screen and (max-width: 1720px) {
 			width: 100%;
+			order: 2;
+		}
+
+		h2 {
+			padding: 0 0 0 20px;
 		}
 
 		b, a {
@@ -481,7 +493,8 @@ li {
 			margin: 20px 0 0;
 
 			@media only screen and (max-width: 768px) {
-				width: 200px;
+				max-width: 250px;
+				font-size: 0.8em;
 			}
 
 			&:focus {
@@ -517,9 +530,11 @@ li {
 
 	&__image {
 		width: 50%;
+		order: 2;
 
 		@media only screen and (max-width: 768px) {
 			width: 100%;
+			order: 1;
 		}
 
 		img {

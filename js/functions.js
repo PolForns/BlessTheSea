@@ -32,7 +32,6 @@ $(document).ready(
 );
 
 $(document).ready(function() {
-	console.log($(window).width());
 	if ($(window).width() < 1200) {
 		$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
 	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
