@@ -285,13 +285,20 @@ li {
 }
 
 /* DESCUBRENOS */
+.quadratDescubrenos {
+	width: 100%;
+	height: 50px;
+	background-color: $rosaFormes;
+}
+
 .triangleDescubrenos {
 	height: 0;
 	width: 0;
 	margin: 0 auto;
 	border-style: solid;
 	border-color: transparent; 
-	border-top: 550px solid $rosaFormes;
+	border-top-style: solid;
+	border-top-color: $rosaFormes;
 }
 
 .descubrenos {

@@ -34,20 +34,26 @@ $(document).ready(
 $(document).ready(function() {
 	if ($(window).width() < 1200) {
 		$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
-	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  	$('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  	$('.quadratDescubrenos').css('height', 767 - $(window).width());
+	  	$('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
-	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	  	$('.triangleDescubrenos').css('border-right-width', '600px');
+	  	$('.quadratDescubrenos').css('height', 0);
 	}
 });
 
 $(window).on('resize', function () {
 	if ($(window).width() < 1200) {
-	  $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
-	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  	$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
+	  	$('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  	$('.quadratDescubrenos').css('height', 767 - $(window).width());
+	  	$('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
-	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	  	$('.triangleDescubrenos').css('border-right-width', '600px');
+	  	$('.quadratDescubrenos').css('height', 0);
 	}
 }).resize();
 
@@ -55,7 +61,7 @@ $(window).on('resize', function () {
 
 /* FUNCTIONS */
 
-function menu(num) {
+function menu (num) {
 	if (num === 1) {
 		$('.menuMobile').removeClass('hidden');
 	} else {
