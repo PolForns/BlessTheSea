@@ -25,7 +25,7 @@ $(document).ready(
 			var $target = $(target);
 
 			$('html, body').animate({
-				'scrollTop': $target.offset().top
+				'scrollTop': $target.offset().top - 200
 			}, 1000, 'swing');
 		});
 	}
@@ -33,30 +33,27 @@ $(document).ready(
 
 $(document).ready(function() {
 	if ($(window).width() < 1200) {
-		// $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
-	  	// $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
-	  	// $('.quadratDescubrenos').css('height', 767 - $(window).width());
-	  	// $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
-	  	$('.triangleDescubrenos').css('margin-left', - 600 + ($(window).width() / 2));
-	  	$('.triangleDescubrenos').css('margin-right', - 600 + ($(window).width() / 2));
-	  	
+		$('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
+	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  $('.quadratDescubrenos').css('height', 768 - $(window).width());
+	  $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
-	  	$('.triangleDescubrenos').css('border-right-width', '600px');
-	  	$('.quadratDescubrenos').css('height', 0);
+	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	  $('.quadratDescubrenos').css('height', 0);
 	}
 });
 
 $(window).on('resize', function () {
 	if ($(window).width() < 1200) {
-	  	// $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
-	  	// $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
-	  	// $('.quadratDescubrenos').css('height', 767 - $(window).width());
-	  	// $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
+	  $('.triangleDescubrenos').css('border-left-width', $(window).width() / 2);
+	  $('.triangleDescubrenos').css('border-right-width', $(window).width() / 2);
+	  $('.quadratDescubrenos').css('height', 768 - $(window).width());
+	  $('.triangleDescubrenos').css('border-top-width', 550 - $('.quadratDescubrenos').height());
 	} else {
 		$('.triangleDescubrenos').css('border-left-width', '600px');
-	  	$('.triangleDescubrenos').css('border-right-width', '600px');
-	  	$('.quadratDescubrenos').css('height', 0);
+	  $('.triangleDescubrenos').css('border-right-width', '600px');
+	  $('.quadratDescubrenos').css('height', 0);
 	}
 }).resize();
 
