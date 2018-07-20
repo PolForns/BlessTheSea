@@ -72,9 +72,11 @@ li {
 	text-align: center;
 
 	@media only screen and (max-width: 768px) {
-		width: auto;
+		width: max-content;
 		max-width: 100%;
 		font-size: 1.2em;
+		margin: 0 auto;
+		padding: 10px 20px;
 	}
 }
 
@@ -280,6 +282,10 @@ li {
 
 			li {
 				line-height: 70px;
+
+				@media only screen and (max-width: 360px) {
+					line-height: 50px;
+				}
 			}
 		}
 
@@ -304,6 +310,7 @@ li {
 	border-color: transparent; 
 	border-top-style: solid;
 	border-top-color: $rosaFormes;
+	border-top-width: 550px;
 }
 
 .descubrenos {
@@ -318,7 +325,7 @@ li {
 	@media only screen and (max-width: 768px) {
 		width: auto;
 		max-width: 100%;
-		padding: 0 40px;
+		padding: 20px 40px 0;
 	}
 
 	h2 {
@@ -597,6 +604,10 @@ li {
 			font-size: 1.9em;
 			text-align: center;
 
+			@media only screen and (max-width: 768px) {
+				font-size: 1.5em;
+			}
+
 			&:focus {
 				outline: none;
 			}
@@ -655,6 +666,8 @@ footer {
 		@media only screen and (max-width: 768px) {
 			order: 2;
 			text-align: center;
+			width: 100%;
+			text-align: center;
 		}
 
 		&--collection {
@@ -674,8 +687,24 @@ footer {
 		&--links {
 			margin: 20px 0 0;
 
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+				margin: 0 auto;
+			}
+
 			a {
 				margin: 0 20px 0 0;
+
+				@media only screen and (max-width: 768px) {
+					line-height: 35px;
+					margin: 0;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				a::after {
+					content: "";
+					display: block;
+				}
 			}
 		}
 	}
